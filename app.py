@@ -18,7 +18,7 @@ selected_team_sidebar = st.sidebar.selectbox("チームを選択", teams, key="s
 st.title("高校野球")
 
 # メイン画面にもチーム選択を表示
-selected_team_main = st.selectbox("チームを選択", teams, index=teams.index(selected_team_sidebar), key="main_team_select")
+selected_team_main = st.radio("チームを選択", teams, index=teams.index(selected_team_sidebar), key="main_team_select")
 
 # チームが選択されていない場合はメッセージを表示
 if selected_team_main == "チーム選択なし":
